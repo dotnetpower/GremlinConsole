@@ -8,7 +8,7 @@
     using System.Threading.Tasks;
 
     class Program
-    {
+    { 
         static void Main(string[] args)
         {
             IConfigurationRoot builder = new ConfigurationBuilder()
