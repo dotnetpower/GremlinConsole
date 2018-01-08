@@ -33,10 +33,10 @@
 
             try
             {
-                Console.WriteLine("connection test...");
-                //Task<List<dynamic>> task = Task.Run(async () => await gremlin.GremlinQuery<dynamic>(graphId, "g.V()"));
-                //var test = task.Result;
-                Console.WriteLine("connected!");
+                Console.WriteLine("Connecting...");
+                Task<List<dynamic>> task = Task.Run(async () => await gremlin.GremlinQuery<dynamic>(graphId, "g.V().Count()"));
+                var test = task.Result;
+                Console.WriteLine("Connected!");
             }
             catch
             {
